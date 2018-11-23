@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EffectStoryWA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ViR-BB-1WW">
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.90811258549999996" green="0.14124199749999999" blue="0.22173443440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Dmc-Vu-oPU"/>
+                                    <constraint firstAttribute="width" constant="100" id="ITN-wz-qNx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="CaW-pT-Fho" kind="show" id="slN-56-A9U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ViR-BB-1WW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FjR-Jj-FJ2"/>
+                            <constraint firstItem="ViR-BB-1WW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XMN-lB-HCS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
+        </scene>
+        <!--Page2 View Controller-->
+        <scene sceneID="6Px-hE-WdA">
+            <objects>
+                <viewController id="CaW-pT-Fho" customClass="Page2ViewController" customModule="EffectStoryWA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="csK-gF-Kvx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0eb-zi-tsC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.90811258549999996" green="0.14124199749999999" blue="0.22173443440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="0eb-zi-tsC" firstAttribute="leading" secondItem="ddh-5D-UsC" secondAttribute="leading" id="Rrr-rk-ASy"/>
+                            <constraint firstItem="0eb-zi-tsC" firstAttribute="trailing" secondItem="ddh-5D-UsC" secondAttribute="trailing" id="cTf-2l-Ur2"/>
+                            <constraint firstItem="0eb-zi-tsC" firstAttribute="top" secondItem="csK-gF-Kvx" secondAttribute="top" id="obb-jk-ke8"/>
+                            <constraint firstItem="0eb-zi-tsC" firstAttribute="bottom" secondItem="csK-gF-Kvx" secondAttribute="bottom" id="wIO-VH-gml"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ddh-5D-UsC"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="GQY-5k-Va8" appends="YES" id="tPG-Aw-Eet"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="0eb-zi-tsC" id="dFk-8V-Ndl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zg4-dj-EA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="GQY-5k-Va8">
+                    <connections>
+                        <action selector="handlePan:" destination="CaW-pT-Fho" id="whc-4g-bKb"/>
+                        <outlet property="delegate" destination="0eb-zi-tsC" id="ioY-2u-1q0"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="810" y="27"/>
+        </scene>
+    </scenes>
+</document>
